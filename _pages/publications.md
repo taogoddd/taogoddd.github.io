@@ -2,9 +2,9 @@
 layout: page
 permalink: /publications/
 title: publications
-description: On the way~~
-years: [1967, 1956, 1950, 1935, 1905]
-nav: false
+description: Still ongoing
+years: []
+nav: true
 nav_order: 1
 ---
 <!-- _pages/publications.md -->
@@ -12,7 +12,7 @@ nav_order: 1
 
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
+<!--   {% bibliography -f papers -q @*[year={{y}}]* %} -->
 {% endfor %}
 
 </div>
