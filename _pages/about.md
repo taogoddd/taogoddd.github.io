@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <div style="margin-bottom:20px; font-family:Bradley Hand" ><a href="https://en.wikipedia.org/wiki/Ars_longa,_vita_brevis">Ars longa, vita brevis</a></div>
+subtitle: <div style="margin-bottom:20px; font-family:Bradley Hand" class="motto">Explore and impress the world</div>
 
 profile:
   align: right
