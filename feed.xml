@@ -1,5 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yitaoliu17.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yitaoliu17.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-04T16:56:04+00:00</updated><id>https://yitaoliu17.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">The webpage is born!</title><link href="https://yitaoliu17.com/blog/2023/Initialization/" rel="alternate" type="text/html" title="The webpage is born!" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/Initialization</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/Initialization/"><![CDATA[<p>The webpage is ready now! My blog is to be updated~</p>]]></content><author><name></name></author><category term="General" /><category term="life" /><summary type="html"><![CDATA[First blog lalala]]></summary></entry><entry><title type="html">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_1/" rel="alternate" type="text/html" title="Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_1</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_1/"><![CDATA[<h3 id="website">Website</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yitaoliu17.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yitaoliu17.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-21T08:44:13+00:00</updated><id>https://yitaoliu17.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_2/" rel="alternate" type="text/html" title="Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)" /><published>2023-06-21T00:00:00+00:00</published><updated>2023-06-21T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_2</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_2/"><![CDATA[<h3 id="website">Website</h3>
+
+<p>https://language-to-reward.github.io/</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>reward shaping in robotics</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>utilize LLMs to define <strong>reward parameters</strong>, and bridge the gap between high-level language instructions or corrections to low-level robot actions</p>
+
+<p>Reward translator + Motion controller</p>
+
+<p>Reward translator:</p>
+
+<p><img src="https://language-to-reward.github.io/img/reward_translator.png" alt="img" /></p>
+
+<p>User instructions + Motion template and rules → Motion description</p>
+
+<p>Motion description + Reward Coder Prompt → Reward function</p>
+
+<p>The transformation is done by LLM</p>
+
+<p>Keypoints:</p>
+
+<ol>
+  <li>
+    <p>Step by step thinking:</p>
+
+    <p>Not directly generate codes but firstly generate description and then generate codes</p>
+  </li>
+  <li>
+    <p>Template:</p>
+
+    <p>Directly generating codes is difficult for LLM. But it is much more easier to complete a template</p>
+  </li>
+</ol>
+
+<h3 id="contributions">Contributions</h3>
+
+<p>Firstly apply the LLM to reward shaping in for robotic skill synthesis</p>
+
+<h3 id="weaknesses">Weaknesses</h3>
+
+<ol>
+  <li>Still much work(template design) need to be done by human.</li>
+  <li>Constraining the reward design space helps improve stability of the system while sacrifices some flexibility.</li>
+</ol>
+
+<h3 id="experiments">Experiments</h3>
+
+<p>Environment: MuJoCo MPC</p>
+
+<p>Underlying LLM: GPT-4</p>
+
+<p>2 robots: quadrupted robot(locomotion) and dexterous manipulator(manipulation)</p>
+
+<p><img src="https://language-to-reward.github.io/videos/sim/bowl2.png" alt="img" /></p>
+
+<p>Comparison and ablation experiment:</p>
+
+<p><img src="https://language-to-reward.github.io/videos/sim/face_sunset.png" alt="img" /></p>
+
+<h3 id="reflection">Reflection</h3>
+
+<ol>
+  <li>learn to tell a good story.</li>
+  <li>If you have a novel idea, but it does not work well. Maybe you can try to take a step back (i.e. template in this paper) to let it work temporarily. Figure out how to let it work later.</li>
+</ol>]]></content><author><name></name></author><category term="General" /><category term="paper_reading," /><category term="reinforcement_learning" /><category term="LLM" /><summary type="html"><![CDATA[Paper reading #2]]></summary></entry><entry><title type="html">The webpage is born!</title><link href="https://yitaoliu17.com/blog/2023/Initialization/" rel="alternate" type="text/html" title="The webpage is born!" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/Initialization</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/Initialization/"><![CDATA[<p>The webpage is ready now! My blog is to be updated~</p>]]></content><author><name></name></author><category term="General" /><category term="life" /><summary type="html"><![CDATA[First blog lalala]]></summary></entry><entry><title type="html">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_1/" rel="alternate" type="text/html" title="Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_1</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_1/"><![CDATA[<h3 id="website">Website</h3>
 
 <p><a href="https://openai.com/research/learning-from-human-preferences">https://openai.com/research/learning-from-human-preferences</a></p>
 
