@@ -2,27 +2,24 @@
 <html lang="en">
 
   <!-- Head -->
-  <head>    <!-- Metadata, OpenGraph and Schema.org -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>
-    blog | Yitao  Liu</title>
-<meta name="author" content="Yitao  Liu" />
-<meta name="description"
-    content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-" />
-<meta name="keywords"
-    content="jekyll, jekyll-theme, academic-website, portfolio-website" />
+<title>Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)  | Yitao  Liu</title>
+<meta name="author" content="Yitao  Liu">
+<meta name="description" content="Paper reading #1">
+<meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
     <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
 
     <!-- Bootstrap & MDB -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
@@ -30,18 +27,18 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
 
     <!-- Styles -->
     
-    <link rel="shortcut icon" href="/assets/img/mind_map.png"/>
+    <link rel="shortcut icon" href="/assets/img/mind_map.png">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://yitaoliu17.com/blog/">
+    <link rel="canonical" href="https://yitaoliu17.com/blog/2023/paper_reading_1/">
     
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
 
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/dark_mode.js"></script>
@@ -58,7 +55,7 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Yitao&nbsp;</span>Liu</a>
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Yitao </span>Liu</a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -108,175 +105,104 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h1>Tao's Blog</h1>
-    <h2>In me the tiger sniffs the rose.</h2>
-  </div>
+<div class="post">
 
-  
-  <div class="tag-list">
-    <ul class="p-0 m-0">
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/paper-reading">paper_reading</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/reinforcement-learning">reinforcement_learning</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/life">life</a>
-        </li>
-        
-      
-    </ul>
-  </div>
-  
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2023/paper_reading_2/">Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)</a>
-        
-      </h3>
-      <p>Paper reading #2</p>
-      <p class="post-meta">
-        2 min read &nbsp; &middot; &nbsp;
-        June 21, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS) </h1>
+    <p class="post-meta">April 17, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/paper-reading">
+          <i class="fas fa-hashtag fa-sm"></i> paper_reading,</a>  
+          <a href="/blog/tag/reinforcement-learning">
+          <i class="fas fa-hashtag fa-sm"></i> reinforcement_learning</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/paper-reading">
-              <i class="fas fa-hashtag fa-sm"></i> paper_reading,</a> &nbsp;
-              
-            <a href="/blog/tag/reinforcement-learning">
-              <i class="fas fa-hashtag fa-sm"></i> reinforcement_learning</a> &nbsp;
-              
-            <a href="/blog/tag/llm">
-              <i class="fas fa-hashtag fa-sm"></i> LLM</a> &nbsp;
-              
+        ·  
+        <a href="/blog/category/general">
+          <i class="fas fa-tag fa-sm"></i> General</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/general">
-              <i class="fas fa-tag fa-sm"></i> General</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <h3 id="website">Website</h3>
 
-    
-    
-    
-    
+<p><a href="https://openai.com/research/learning-from-human-preferences" rel="external nofollow noopener" target="_blank">https://openai.com/research/learning-from-human-preferences</a></p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2023/paper_reading_1/">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS) </a>
-        
-      </h3>
-      <p>Paper reading #1</p>
-      <p class="post-meta">
-        2 min read &nbsp; &middot; &nbsp;
-        April 17, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+<h3 id="problem">Problem</h3>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/paper-reading">
-              <i class="fas fa-hashtag fa-sm"></i> paper_reading,</a> &nbsp;
-              
-            <a href="/blog/tag/reinforcement-learning">
-              <i class="fas fa-hashtag fa-sm"></i> reinforcement_learning</a> &nbsp;
-              
-          
+<p>Reward functions for complex tasks are hard to design</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/general">
-              <i class="fas fa-tag fa-sm"></i> General</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<h3 id="solution">Solution</h3>
 
-    
+<p><img src="https://openaicom.imgix.net/76127a33-15be-4357-aefb-1e509fe1330f/diagram2x-2.png?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80&amp;rect=0%2C0%2C1124%2C453&amp;w=2600" alt="img"></p>
 
-    
-    
-    
-    
+<p>human preference data → reward model(NN)</p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2023/Initialization/">The webpage is born!</a>
-        
-      </h3>
-      <p>First blog lalala</p>
-      <p class="post-meta">
-        1 min read &nbsp; &middot; &nbsp;
-        April 17, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+<p>“Our algorithm fits a reward function to the human’s preferences while simultaneously training a policy to optimize the current predicted reward function”</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/life">
-              <i class="fas fa-hashtag fa-sm"></i> life</a> &nbsp;
-              
-          
+<ol>
+  <li>The policy π interacts with the environment to produce a set of trajectories {τ 1, . . . , τ i}. The parameters of π are updated by a traditional reinforcement learning algorithm, in order to maximize the sum of the predicted rewards rt = ˆr(ot, at).</li>
+  <li>We select pairs of segments (σ1, σ2) from the trajectories {τ 1, . . . , τ i} produced in step 1, and send them to a human for comparison.</li>
+  <li>The parameters of the mapping ˆr are optimized via supervised learning to fit the comparisons collected from the human so far.</li>
+  <li>Repeat</li>
+</ol>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/general">
-              <i class="fas fa-tag fa-sm"></i> General</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<p>注意⚠️：reward是continuous value，因为它只是一个predictor，probability是reward套一个softmax得出来的，而非预测完probability之后，用0或1作为reward</p>
 
-    
-  </ul>
+<h3 id="contributions">Contributions</h3>
 
-  
+<p>scale human feedback up to deep reinforcement learning and to learn much more complex behaviors.</p>
 
+<h3 id="weaknesses">Weaknesses</h3>
+
+<ol>
+  <li>高昂人力成本</li>
+  <li>没有利用好score的力量</li>
+</ol>
+
+<h3 id="experiment">Experiment</h3>
+
+<p>Env: MuJoCo and Atari game</p>
+
+<p>Comparison Experiment：</p>
+
+<ol>
+  <li>Human queries: 人来标注数据</li>
+  <li>Synthetic Oracle：when the agent queries for a comparison, instead of sending the query to a human, we immediately reply by indicating a preference for whichever trajectory segment actually receives a higher reward in the underlying task</li>
+  <li>Real Reward</li>
+</ol>
+
+<p>Ablation Experiment:</p>
+
+<ol>
+  <li>Offline queries(train on queries only gathered at the beginning of training, rather than gathered throughout training) performs bad. Online queries are important for learning</li>
+  <li>Comparison is easier to do for humans but</li>
+</ol>
+
+<h3 id="findings">Findings</h3>
+
+<ol>
+  <li>human通过comparison标注数据的原因是it much easier for humans to provide consistent comparisons than consistent absolute scores</li>
+  <li>
+    <p>For continuous control tasks we found that <strong>predicting comparisons worked much better than predicting scores</strong>. This is likely because the scale of rewards varies substantially and this complicates the regression problem, which is smoothed significantly when we only need to predict comparisons.</p>
+
+    <p>注意⚠️：是predict不是label</p>
+  </li>
+</ol>
+
+<h3 id="deeper">Deeper?</h3>
+
+<ol>
+  <li>Binary comparison只能提供2选1的信息，relative magnitude of the reward are important to learning</li>
+  <li>How to accelerate the learning and reduce the time of human labeling</li>
+</ol>
+
+  </article>
 </div>
 
     </div>
