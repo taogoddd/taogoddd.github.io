@@ -1,1 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yitaoliu17.com/feed.xml" rel="self" type="application/atom+xml"/><link href="https://yitaoliu17.com/" rel="alternate" type="text/html" hreflang="en"/><updated>2023-06-22T17:26:57+08:00</updated><id>https://yitaoliu17.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_2/" rel="alternate" type="text/html" title="Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)"/><published>2023-06-21T00:00:00+08:00</published><updated>2023-06-21T00:00:00+08:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_2</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_2/"><![CDATA[<h3 id="website">Website</h3> <p>https://language-to-reward.github.io/</p> <h3 id="problem">Problem</h3> <p>reward shaping in robotics</p> <h3 id="solution">Solution</h3> <p>utilize LLMs to define <strong>reward parameters</strong>, and bridge the gap between high-level language instructions or corrections to low-level robot actions</p> <p>Reward translator + Motion controller</p> <p>Reward translator:</p> <p><img src="https://language-to-reward.github.io/img/reward_translator.png" alt="img"/></p> <p>User instructions + Motion template and rules → Motion description</p> <p>Motion description + Reward Coder Prompt → Reward function</p> <p>The transformation is done by LLM</p> <p>Keypoints:</p> <ol> <li> <p>Step by step thinking:</p> <p>Not directly generate codes but firstly generate description and then generate codes</p> </li> <li> <p>Template:</p> <p>Directly generating codes is difficult for LLM. But it is much more easier to complete a template</p> </li> </ol> <h3 id="contributions">Contributions</h3> <p>Firstly apply the LLM to reward shaping in for robotic skill synthesis</p> <h3 id="weaknesses">Weaknesses</h3> <ol> <li>Still much work(template design) need to be done by human.</li> <li>Constraining the reward design space helps improve stability of the system while sacrifices some flexibility.</li> </ol> <h3 id="experiments">Experiments</h3> <p>Environment: MuJoCo MPC</p> <p>Underlying LLM: GPT-4</p> <p>2 robots: quadrupted robot(locomotion) and dexterous manipulator(manipulation)</p> <p><img src="https://language-to-reward.github.io/videos/sim/bowl2.png" alt="img"/></p> <p>Comparison and ablation experiment:</p> <p><img src="https://language-to-reward.github.io/videos/sim/face_sunset.png" alt="img"/></p> <h3 id="reflection">Reflection</h3> <ol> <li>learn to tell a good story.</li> <li>If you have a novel idea, but it does not work well. Maybe you can try to take a step back (i.e. template in this paper) to let it work temporarily. Figure out how to let it work later.</li> </ol>]]></content><author><name></name></author><category term="General"/><category term="paper_reading,"/><category term="reinforcement_learning"/><category term="LLM"/><summary type="html"><![CDATA[Paper reading #2]]></summary></entry><entry><title type="html">The webpage is born!</title><link href="https://yitaoliu17.com/blog/2023/Initialization/" rel="alternate" type="text/html" title="The webpage is born!"/><published>2023-04-17T00:00:00+08:00</published><updated>2023-04-17T00:00:00+08:00</updated><id>https://yitaoliu17.com/blog/2023/Initialization</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/Initialization/"><![CDATA[<p>The webpage is ready now! My blog is to be updated~</p>]]></content><author><name></name></author><category term="General"/><category term="life"/><summary type="html"><![CDATA[First blog lalala]]></summary></entry><entry><title type="html">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_1/" rel="alternate" type="text/html" title="Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)"/><published>2023-04-17T00:00:00+08:00</published><updated>2023-04-17T00:00:00+08:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_1</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_1/"><![CDATA[<h3 id="website">Website</h3> <p><a href="https://openai.com/research/learning-from-human-preferences">https://openai.com/research/learning-from-human-preferences</a></p> <h3 id="problem">Problem</h3> <p>Reward functions for complex tasks are hard to design</p> <h3 id="solution">Solution</h3> <p><img src="https://openaicom.imgix.net/76127a33-15be-4357-aefb-1e509fe1330f/diagram2x-2.png?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80&amp;rect=0%2C0%2C1124%2C453&amp;w=2600" alt="img"/></p> <p>human preference data → reward model(NN)</p> <p>“Our algorithm fits a reward function to the human’s preferences while simultaneously training a policy to optimize the current predicted reward function”</p> <ol> <li>The policy π interacts with the environment to produce a set of trajectories {τ 1, . . . , τ i}. The parameters of π are updated by a traditional reinforcement learning algorithm, in order to maximize the sum of the predicted rewards rt = ˆr(ot, at).</li> <li>We select pairs of segments (σ1, σ2) from the trajectories {τ 1, . . . , τ i} produced in step 1, and send them to a human for comparison.</li> <li>The parameters of the mapping ˆr are optimized via supervised learning to fit the comparisons collected from the human so far.</li> <li>Repeat</li> </ol> <p>注意⚠️：reward是continuous value，因为它只是一个predictor，probability是reward套一个softmax得出来的，而非预测完probability之后，用0或1作为reward</p> <h3 id="contributions">Contributions</h3> <p>scale human feedback up to deep reinforcement learning and to learn much more complex behaviors.</p> <h3 id="weaknesses">Weaknesses</h3> <ol> <li>高昂人力成本</li> <li>没有利用好score的力量</li> </ol> <h3 id="experiment">Experiment</h3> <p>Env: MuJoCo and Atari game</p> <p>Comparison Experiment：</p> <ol> <li>Human queries: 人来标注数据</li> <li>Synthetic Oracle：when the agent queries for a comparison, instead of sending the query to a human, we immediately reply by indicating a preference for whichever trajectory segment actually receives a higher reward in the underlying task</li> <li>Real Reward</li> </ol> <p>Ablation Experiment:</p> <ol> <li>Offline queries(train on queries only gathered at the beginning of training, rather than gathered throughout training) performs bad. Online queries are important for learning</li> <li>Comparison is easier to do for humans but</li> </ol> <h3 id="findings">Findings</h3> <ol> <li>human通过comparison标注数据的原因是it much easier for humans to provide consistent comparisons than consistent absolute scores</li> <li> <p>For continuous control tasks we found that <strong>predicting comparisons worked much better than predicting scores</strong>. This is likely because the scale of rewards varies substantially and this complicates the regression problem, which is smoothed significantly when we only need to predict comparisons.</p> <p>注意⚠️：是predict不是label</p> </li> </ol> <h3 id="deeper">Deeper?</h3> <ol> <li>Binary comparison只能提供2选1的信息，relative magnitude of the reward are important to learning</li> <li>How to accelerate the learning and reduce the time of human labeling</li> </ol>]]></content><author><name></name></author><category term="General"/><category term="paper_reading,"/><category term="reinforcement_learning"/><summary type="html"><![CDATA[Paper reading #1]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yitaoliu17.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yitaoliu17.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-22T09:27:16+00:00</updated><id>https://yitaoliu17.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_2/" rel="alternate" type="text/html" title="Language to Rewards for Robotic Skill Synthesis (2023.6.14 Google DeepMind)" /><published>2023-06-21T00:00:00+00:00</published><updated>2023-06-21T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_2</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_2/"><![CDATA[<h3 id="website">Website</h3>
+
+<p>https://language-to-reward.github.io/</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>reward shaping in robotics</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>utilize LLMs to define <strong>reward parameters</strong>, and bridge the gap between high-level language instructions or corrections to low-level robot actions</p>
+
+<p>Reward translator + Motion controller</p>
+
+<p>Reward translator:</p>
+
+<p><img src="https://language-to-reward.github.io/img/reward_translator.png" alt="img" /></p>
+
+<p>User instructions + Motion template and rules → Motion description</p>
+
+<p>Motion description + Reward Coder Prompt → Reward function</p>
+
+<p>The transformation is done by LLM</p>
+
+<p>Keypoints:</p>
+
+<ol>
+  <li>
+    <p>Step by step thinking:</p>
+
+    <p>Not directly generate codes but firstly generate description and then generate codes</p>
+  </li>
+  <li>
+    <p>Template:</p>
+
+    <p>Directly generating codes is difficult for LLM. But it is much more easier to complete a template</p>
+  </li>
+</ol>
+
+<h3 id="contributions">Contributions</h3>
+
+<p>Firstly apply the LLM to reward shaping in for robotic skill synthesis</p>
+
+<h3 id="weaknesses">Weaknesses</h3>
+
+<ol>
+  <li>Still much work(template design) need to be done by human.</li>
+  <li>Constraining the reward design space helps improve stability of the system while sacrifices some flexibility.</li>
+</ol>
+
+<h3 id="experiments">Experiments</h3>
+
+<p>Environment: MuJoCo MPC</p>
+
+<p>Underlying LLM: GPT-4</p>
+
+<p>2 robots: quadrupted robot(locomotion) and dexterous manipulator(manipulation)</p>
+
+<p><img src="https://language-to-reward.github.io/videos/sim/bowl2.png" alt="img" /></p>
+
+<p>Comparison and ablation experiment:</p>
+
+<p><img src="https://language-to-reward.github.io/videos/sim/face_sunset.png" alt="img" /></p>
+
+<h3 id="reflection">Reflection</h3>
+
+<ol>
+  <li>learn to tell a good story.</li>
+  <li>If you have a novel idea, but it does not work well. Maybe you can try to take a step back (i.e. template in this paper) to let it work temporarily. Figure out how to let it work later.</li>
+</ol>]]></content><author><name></name></author><category term="General" /><category term="paper_reading," /><category term="reinforcement_learning" /><category term="LLM" /><summary type="html"><![CDATA[Paper reading #2]]></summary></entry><entry><title type="html">The webpage is born!</title><link href="https://yitaoliu17.com/blog/2023/Initialization/" rel="alternate" type="text/html" title="The webpage is born!" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/Initialization</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/Initialization/"><![CDATA[<p>The webpage is ready now! My blog is to be updated~</p>]]></content><author><name></name></author><category term="General" /><category term="life" /><summary type="html"><![CDATA[First blog lalala]]></summary></entry><entry><title type="html">Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)</title><link href="https://yitaoliu17.com/blog/2023/paper_reading_1/" rel="alternate" type="text/html" title="Deep Reinforcement Learning from Human Preferences (2017 NeurIPS)" /><published>2023-04-17T00:00:00+00:00</published><updated>2023-04-17T00:00:00+00:00</updated><id>https://yitaoliu17.com/blog/2023/paper_reading_1</id><content type="html" xml:base="https://yitaoliu17.com/blog/2023/paper_reading_1/"><![CDATA[<h3 id="website">Website</h3>
+
+<p><a href="https://openai.com/research/learning-from-human-preferences">https://openai.com/research/learning-from-human-preferences</a></p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Reward functions for complex tasks are hard to design</p>
+
+<h3 id="solution">Solution</h3>
+
+<p><img src="https://openaicom.imgix.net/76127a33-15be-4357-aefb-1e509fe1330f/diagram2x-2.png?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80&amp;rect=0%2C0%2C1124%2C453&amp;w=2600" alt="img" /></p>
+
+<p>human preference data → reward model(NN)</p>
+
+<p>“Our algorithm fits a reward function to the human’s preferences while simultaneously training a policy to optimize the current predicted reward function”</p>
+
+<ol>
+  <li>The policy π interacts with the environment to produce a set of trajectories {τ 1, . . . , τ i}. The parameters of π are updated by a traditional reinforcement learning algorithm, in order to maximize the sum of the predicted rewards rt = ˆr(ot, at).</li>
+  <li>We select pairs of segments (σ1, σ2) from the trajectories {τ 1, . . . , τ i} produced in step 1, and send them to a human for comparison.</li>
+  <li>The parameters of the mapping ˆr are optimized via supervised learning to fit the comparisons collected from the human so far.</li>
+  <li>Repeat</li>
+</ol>
+
+<p>注意⚠️：reward是continuous value，因为它只是一个predictor，probability是reward套一个softmax得出来的，而非预测完probability之后，用0或1作为reward</p>
+
+<h3 id="contributions">Contributions</h3>
+
+<p>scale human feedback up to deep reinforcement learning and to learn much more complex behaviors.</p>
+
+<h3 id="weaknesses">Weaknesses</h3>
+
+<ol>
+  <li>高昂人力成本</li>
+  <li>没有利用好score的力量</li>
+</ol>
+
+<h3 id="experiment">Experiment</h3>
+
+<p>Env: MuJoCo and Atari game</p>
+
+<p>Comparison Experiment：</p>
+
+<ol>
+  <li>Human queries: 人来标注数据</li>
+  <li>Synthetic Oracle：when the agent queries for a comparison, instead of sending the query to a human, we immediately reply by indicating a preference for whichever trajectory segment actually receives a higher reward in the underlying task</li>
+  <li>Real Reward</li>
+</ol>
+
+<p>Ablation Experiment:</p>
+
+<ol>
+  <li>Offline queries(train on queries only gathered at the beginning of training, rather than gathered throughout training) performs bad. Online queries are important for learning</li>
+  <li>Comparison is easier to do for humans but</li>
+</ol>
+
+<h3 id="findings">Findings</h3>
+
+<ol>
+  <li>human通过comparison标注数据的原因是it much easier for humans to provide consistent comparisons than consistent absolute scores</li>
+  <li>
+    <p>For continuous control tasks we found that <strong>predicting comparisons worked much better than predicting scores</strong>. This is likely because the scale of rewards varies substantially and this complicates the regression problem, which is smoothed significantly when we only need to predict comparisons.</p>
+
+    <p>注意⚠️：是predict不是label</p>
+  </li>
+</ol>
+
+<h3 id="deeper">Deeper?</h3>
+
+<ol>
+  <li>Binary comparison只能提供2选1的信息，relative magnitude of the reward are important to learning</li>
+  <li>How to accelerate the learning and reduce the time of human labeling</li>
+</ol>]]></content><author><name></name></author><category term="General" /><category term="paper_reading," /><category term="reinforcement_learning" /><summary type="html"><![CDATA[Paper reading #1]]></summary></entry></feed>
