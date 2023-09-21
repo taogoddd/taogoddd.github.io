@@ -265,8 +265,8 @@ display_tags: ['paper_reading', 'reinforcement_learning', 'life'] # this tags wi
 
 scholar:
 
-  last_name: [Yitao]
-  first_name: [Liu]
+  last_name: [Liu]
+  first_name: [Yitao]
 
   style: apa
   locale: en
