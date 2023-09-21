@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: XLang
+description: An Open-Source Framework for Building Language Model Agents via Executable Language Grounding
+img: assets/img/xlang_overview.webp
 importance: 1
-category: work
+category: research
+redirect: https://www.xlang.ai/blog/xlang-intro
 ---
 
 Every project has a beautiful feature showcase page.

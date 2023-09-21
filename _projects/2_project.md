@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: Lemur
+description: The State-of-the-art Open Pretrained Large Language Models Balancing Text and Code Capabilities
+redirect: https://www.xlang.ai/blog/openlemur
+img: assets/img/lemur-twitter.webp
 importance: 2
-category: work
+category: research
 ---
 
 Every project has a beautiful feature showcase page.

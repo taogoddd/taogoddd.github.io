@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: RIC Website
+description: Official website of RIC
+img: assets/img/ric-web.svg
 importance: 3
-category: fun
+category: general
 ---
 
 Every project has a beautiful feature showcase page.
