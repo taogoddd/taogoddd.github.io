@@ -15,77 +15,90 @@
       institution: The University of Hong Kong
       year: 2021
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Computer Science
+        - GPA 3.87/4.3
+        - Dean's honors list
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: Department of Computer Science, The University of Hong Kong
+      year: Feb, 2023 - Oct, 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Advised by Dr. Tao Yu
+        # - Description 2.
+        - title: Research Interests
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+            - Large Language Models (<a href="https://www.xlang.ai/blog/openlemur">Lemur</a>)
+            - Language Agents (<a href="https://www.xlang.ai/blog/xlang-intro">XLang Agents</a>)
+            - Reinforcement Learning (<a href="https://text-to-reward.github.io/">Text2Reward</a>)
+    # - title: Visiting Professor
+    #   institution: California Institute of Technology, Pasadena, California, US
+    #   year: 1933
+    #   description:
+    #     - Description 1.
+    #     - Description 2.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    # - title: Director
+    #   institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+    #   year: 1917-1933
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+    # - title: Professor of Theoretical Physics
+    #   institution: Karl-Ferdinand University, Prague, Czechoslovakia
+    #   year: 1911 - 1917
+    #   description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    # - title: Associate Professor of Theoretical Physics
+    #   institution: University of Zurich, Zurich, Switzerland
+    #   year: 1909 - 1911
 
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://chat.xlang.ai">XLang Agents</a>
+      year: May, 2023 - now
+      description: An Open-Source Framework for Building Language Model Agents via Executable Language Grounding. Blog is at <a href="https://www.xlang.ai/blog/xlang-intro">here</a>.
+    - title: <a href="https://richku.com/">RIC Official Website</a>
+      year: Sep, 2021 - now
+      description: The official website of RIC, a student organization in HKU. 
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2021 - 2025
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - title: HKU Undergraduate Entrance Scholarship for Outstanding Students
+          contents: 
+            - Full tuition covered
+            - The highest honor for HKU undergraduate students
+    - year: 2021 - 2022
       items: 
-        - Max Planck Medal
+        - title: Dean's Award for Engineering Students
+          contents:
+            - Top 10 students in the Faculty of Engineering
+    - year: 2021 - 2022
+      items: 
+        - title: Dean's Honors List
+          contents:
+            - Top 10% students in the Faculty of Engineering
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming Languages
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Python, C++, C, HTML, CSS, Javascript, Typescript, Bash, LaTeX, Markdown, Java
+    - title: Languages
       items:
-        - Description 1.
-        - Description 2.
+        - English - Fluent
+        - Mandarin - Native
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.

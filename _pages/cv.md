@@ -2,7 +2,7 @@
 layout: cv
 permalink: /cv/
 title: cv
-nav: false
-nav_order: 4
-cv_pdf: LIU_Yitao_CV.pdf
+nav: true
+nav_order: 1
+cv_pdf: yitaoliu_resume.pdf
 ---
