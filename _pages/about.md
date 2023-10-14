@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <div style="margin-bottom:20px; font-family:Bradley Hand" class="motto">Explore and impress the world</div>
+subtitle: <div style="margin-bottom:20px; font-family:Bradley Hand" class="motto">In me the tiger sniffs the rose</div>
 
 profile:
   align: right
