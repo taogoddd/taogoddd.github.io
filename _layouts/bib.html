@@ -30,6 +30,27 @@
         <div id="{{entry.key}}" class="col-sm-8">
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
+        <!-- Tags -->
+        <div class="tags">
+        {%- if entry.tags -%}
+          {% assign array = entry.tags | split: " and " %}
+          {%- for tag in array -%}
+            {%- if site.data.venues[tag] -%}
+              {%- assign venue_style = nil -%}
+              {%- if site.data.venues[tag].color != blank -%}
+                {%- assign venue_style = site.data.venues[tag].color | prepend: 'style="background-color:' | append: '"' -%}
+              {%- endif -%}
+              <span style="margin-right: 1%;">
+                <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %} >{{tag}}</abbr>
+              </span>
+            {%- else -%}
+            <span style="margin-right: 1%;">
+              <abbr class="badge">{{tag}}</abbr>
+            </span>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+        </div>
         <!-- Author -->
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}
