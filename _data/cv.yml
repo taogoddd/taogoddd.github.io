@@ -34,9 +34,9 @@
         # - Description 2.
         - title: Research Interests
           contents:
-            - Large Language Models (<a href="https://www.xlang.ai/blog/openlemur">Lemur</a>)
-            - Language Agents (<a href="https://www.xlang.ai/blog/xlang-intro">XLang Agents</a>)
-            - Reinforcement Learning (<a href="https://text-to-reward.github.io/">Text2Reward</a>)
+            - Large Language Models (<a href="https://arxiv.org/abs/2310.06830">Lemur</a>)
+            - Language Agents (<a href="https://arxiv.org/abs/2310.10634">OpenAgents</a>)
+            - Reinforcement Learning (<a href="https://arxiv.org/abs/2309.11489">Text2Reward</a>)
     # - title: Visiting Professor
     #   institution: California Institute of Technology, Pasadena, California, US
     #   year: 1933
@@ -60,9 +60,9 @@
 - title: Projects
   type: time_table
   contents:
-    - title: <a href="https://chat.xlang.ai">XLang Agents</a>
+    - title: <a href="https://github.com/xlang-ai/OpenAgents">OpenAgents</a>
       year: May, 2023 - now
-      description: An Open-Source Framework for Building Language Model Agents via Executable Language Grounding. Blog is at <a href="https://www.xlang.ai/blog/xlang-intro">here</a>.
+      description: An Open Platform for Language Agents in the wild
     - title: <a href="https://richku.com/">RIC Official Website</a>
       year: Sep, 2021 - now
       description: The official website of RIC, a student organization in HKU. 
