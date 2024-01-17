@@ -153,6 +153,12 @@
         <div class="periodical">
           {{ entry.note | strip }}
         </div>
+        <!--Specs-->
+        <div class="specs">
+          {%- if entry.specs -%}
+          <span>{{entry.specs}}</span>
+          {%- endif -%}
+        </div>
 
           <!-- Links/Buttons -->
           <div class="links">
