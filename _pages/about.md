@@ -6,7 +6,7 @@ subtitle: <div style="margin-bottom:20px; font-family:Bradley Hand" class="motto
 
 profile:
   align: right
-  image: guitar.jpg
+  image: princeton.jpg
   image_circular: false # crops the image to make it circular
   address: >
 
