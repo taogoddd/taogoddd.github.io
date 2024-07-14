@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-<span>Two papers accepted by ICLR 2024 as </span><span class="motto">spotlight</span>
+<span>Two papers accepted by ICLR 2024 as </span><span class="motto">Spotlight</span>
