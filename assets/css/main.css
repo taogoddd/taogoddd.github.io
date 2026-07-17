@@ -145,6 +145,31 @@ table.table a:hover:after :not(.nav-item.dropdown) {
   color: var(--global-theme-color);
 }
 
+.motto.typewriter-active::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 0.12em;
+  vertical-align: -0.08em;
+  background-color: currentColor;
+  animation: motto-cursor-blink 0.8s step-end infinite;
+}
+
+.motto.typewriter-complete::after {
+  opacity: 0;
+  animation: none;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes motto-cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 figure,
 img {
   max-width: 90vw;
@@ -590,6 +615,14 @@ footer.sticky-bottom {
 .publications ol.bibliography li .author > span.more-authors:hover {
   color: var(--global-text-color);
   border-bottom: 1px dashed var(--global-text-color);
+}
+.publications ol.bibliography li .contribution {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+.publications ol.bibliography li .contribution .contribution-label {
+  font-weight: 600;
 }
 .publications ol.bibliography li .links a.btn {
   color: var(--global-text-color);
