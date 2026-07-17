@@ -153,6 +153,11 @@
         <div class="periodical">
           {{ entry.note | strip }}
         </div>
+        {%- if entry.contribution and entry.contribution != blank %}
+        <div class="contribution">
+          <span class="contribution-label">Contribution:</span> {{ entry.contribution }}
+        </div>
+        {%- endif %}
         <!--Specs-->
         <div class="specs">
           {%- if entry.specs -%}

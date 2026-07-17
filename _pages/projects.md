@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: Turn something into reality
-nav: true
+nav: false
 nav_order: 3
 display_categories: [research, general]
 horizontal: false
